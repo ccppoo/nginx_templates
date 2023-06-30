@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^9.0.0",
+    "njs-types": "^0.7.12"
+  }
+}
