@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    image: nginx:latest
+    # container_name: njs_example
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./dist:/etc/nginx/njs/:ro
+    ports:
+      - 443:443
+      - 80:80
