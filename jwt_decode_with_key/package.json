@@ -14,6 +14,7 @@
     "start": "run-p watch start-nginx",
     "start-nginx": "start-nginx --version 1.24.x --port 8090 --watch dist/ integration-tests/nginx.conf",
     "test": "rollup -c && mocha",
+    "test:docker": "rollup -c && mocha --config ./docker-test/.mocharc.js ./docker-test/*.js",
     "watch": "rollup -c --watch --no-watch.clearScreen"
   },
   "engines": {
@@ -46,6 +47,8 @@
     "typescript": "~5.0.4"
   },
   "dependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
     "jwt-simple": "^0.5.6"
   }
 }
